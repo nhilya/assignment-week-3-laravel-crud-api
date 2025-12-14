@@ -11,8 +11,6 @@ git clone https://github.com/nhilya/assignment-week-3-laravel-crud-api.git
 cd assignment-week-3-laravel-crud-api
 ```
 
----
-
 ### ✅ 2. Install PHP dependencies
 
 Ensure you have PHP (8.1 or newer) and Composer installed.
@@ -21,8 +19,6 @@ Ensure you have PHP (8.1 or newer) and Composer installed.
 composer install
 ```
 
----
-
 ### ✅ 3. Install Node dependencies
 
 Make sure you have Node.js and npm installed.
@@ -30,8 +26,6 @@ Make sure you have Node.js and npm installed.
 ```bash
 npm install
 ```
-
----
 
 ### ✅ 4. Set up environment file
 
@@ -44,8 +38,6 @@ Then generate the app key:
 ```bash
 php artisan key:generate
 ```
-
----
 
 ### ✅ 5. Configure your database
 
@@ -66,8 +58,6 @@ Then run:
 php artisan migrate
 ```
 
----
-
 ### ✅ 6. Create a Filament admin user
 
 ```bash
@@ -76,15 +66,12 @@ php artisan make:filament-user
 
 Follow the prompts to create your login.
 
----
 
 ### ✅ 7. Run Vite in development
 
 ```bash
 npm run dev
 ```
-
----
 
 ### ✅ 8. Serve the app with Laravel Valet or PHP's built-in server
 
@@ -110,20 +97,14 @@ php artisan serve
 
 Visit: [http://localhost:8000/admin](http://localhost:8000/admin)
 
----
-
 ### ✅ Notes
 
 - This app uses **Filament Admin Panel v3**
 - Session driver: `database` (run `php artisan session:table && php artisan migrate` if needed)
 - Logging: daily logs in `storage/logs`
 
----
-
 ### ✅ Troubleshooting
 
 - Run `composer install` if `vendor` folder is missing.
 - Run `npm run build` for production assets.
 - Ensure database is running locally.
-
----
