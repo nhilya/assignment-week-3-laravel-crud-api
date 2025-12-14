@@ -58,22 +58,13 @@ Then run:
 php artisan migrate
 ```
 
-### ✅ 6. Create a Filament admin user
-
-```bash
-php artisan make:filament-user
-```
-
-Follow the prompts to create your login.
-
-
-### ✅ 7. Run Vite in development
+### ✅ 6. Run Vite in development
 
 ```bash
 npm run dev
 ```
 
-### ✅ 8. Serve the app with Laravel Valet or PHP's built-in server
+### ✅ 7. Serve the app with Laravel Valet or PHP's built-in server
 
 **If using Valet:**
 
@@ -82,8 +73,8 @@ valet link
 valet secure
 ```
 
-- `valet link` registers your project with Valet so it can be accessed via `http://assignment-week-3-laravel-crud-api.test/`.
-- `valet secure` enables HTTPS by generating a self-signed TLS certificate for your site, making it accessible at `https://assignment-week-3-laravel-crud-api.test/`.
+-   `valet link` registers your project with Valet so it can be accessed via `http://assignment-week-3-laravel-crud-api.test/`.
+-   `valet secure` enables HTTPS by generating a self-signed TLS certificate for your site, making it accessible at `https://assignment-week-3-laravel-crud-api.test/`.
 
 > ⚠️ Note: Browsers may show a warning for self-signed certificates. You can safely bypass it in local development.
 
@@ -95,15 +86,15 @@ Visit: [https://assignment-week-3-laravel-crud-api.test/](https://assignment-wee
 php artisan serve
 ```
 
-Visit: [http://localhost:8000/admin](http://localhost:8000/admin)
+Visit: [http://localhost:8000](http://localhost:8000)
 
 ### ✅ Notes
 
-- Session driver: `database` (run `php artisan session:table && php artisan migrate` if needed)
-- Logging: daily logs in `storage/logs`
+-   Session driver: `database` (run `php artisan session:table && php artisan migrate` if needed)
+-   Logging: daily logs in `storage/logs`
 
 ### ✅ Troubleshooting
 
-- Run `composer install` if `vendor` folder is missing.
-- Run `npm run build` for production assets.
-- Ensure database is running locally.
+-   Run `composer install` if `vendor` folder is missing.
+-   Run `npm run build` for production assets.
+-   Ensure database is running locally.
