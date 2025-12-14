@@ -99,7 +99,6 @@ Visit: [http://localhost:8000/admin](http://localhost:8000/admin)
 
 ### ✅ Notes
 
-- This app uses **Filament Admin Panel v3**
 - Session driver: `database` (run `php artisan session:table && php artisan migrate` if needed)
 - Logging: daily logs in `storage/logs`
 
