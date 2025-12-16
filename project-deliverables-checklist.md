@@ -84,19 +84,33 @@ Before submitting, ensure:
 3. [ ] Add screenshot to `/screenshots` folder
 4. [ ] Submitted the repository to [Sir Uzzair](mailto:uzzair@invokeisdata.com)
 
-# Daily Dev Log – 17-12-2025
+# Daily Dev Log
+## #1 - 17-12-2025
 
 ## 🧠 Plan for Today
-- [ ] [Part A - Project Setup](#part-a-project-setup-25-marks)
+- [Part A - Project Setup](#part-a-project-setup-25-marks)
+- Created a new Laravel project
+- Created a GitHub repository and initialized the project to remote
+- Created a README.md file with setup instructions
+- Pushed the first commit to GitHub
+- Created `/screenshot` folder
 
 ## 🛠 What I Worked On
-...
+- [x] [Part A - Project Setup](#part-a-project-setup-25-marks)
+- [x] Created a new Laravel project
+- [x] Created a GitHub repository and initialized the project to remote
+- [x] Created a README.md file with setup instructions
+- [x] Pushed the first commit to GitHub
+- [x] Created `/screenshot` folder
 
 ## 💭 Key Learnings
-...
+- None, mostly learned on how to setup a Laravel project 😌
+- Download and configured Bruno Client 🫨
+- Practiced on documenting using md file 📝
+
 
 ## 🧩 Bugs or Blockers
-...
+- None, as for now 😮‍💨
 
 ## 🚀 Next Steps / Tomorrow
-- [ ] [Part B - Model & Migrations](#part-b-model--migrations-25-marks)
+- [Part B - Model & Migrations](#part-b-model--migrations-25-marks)
