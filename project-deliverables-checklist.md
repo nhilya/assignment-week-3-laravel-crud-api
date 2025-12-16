@@ -85,7 +85,7 @@ Before submitting, ensure:
 4. [ ] Submitted the repository to [Sir Uzzair](mailto:uzzair@invokeisdata.com)
 
 # Daily Dev Log
-## #1 - 17-12-2025
+## #1 - 16-12-2025
 
 ## 🧠 Plan for Today
 - [Part A - Project Setup](#part-a-project-setup-25-marks)
