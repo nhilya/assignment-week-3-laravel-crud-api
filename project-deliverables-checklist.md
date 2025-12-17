@@ -16,23 +16,23 @@ Deadline: 21-12-2025, 11:59 PM
     - [ ] Update an existing product
     - [ ] Delete a product
 
-- [ ] Screenshot of .env database configurations
-- [ ] Screenshot of successful `php artisan migrate` output
+- [x] Screenshot of .env database configurations
+- [x] Screenshot of successful `php artisan migrate` output
 
 ## Part B: Model & Migrations (25 marks)
 
-- [ ] Create a model named `Product` with the following attributes:
-    - [ ] `id` (primary key)
-    - [ ] `name` (string, 255)
-    - [ ] `description` (text, nullable)
-    - [ ] `price` (decimal, 10, 2)
-    - [ ] `stock` (int, default 0)
-    - [ ] `created_at` (timestamp)
-    - [ ] `updated_at` (timestamp)
+- [x] Create a model named `Product` with the following attributes:
+    - [x] `id` (primary key)
+    - [x] `name` (string, 255)
+    - [x] `description` (text, nullable)
+    - [x] `price` (decimal, 10, 2)
+    - [x] `stock` (int, default 0)
+    - [x] `created_at` (timestamp)
+    - [x] `updated_at` (timestamp)
 
-- [ ] `Product.php` Model file in `app/Models` folder
-- [ ] Migration file in `database/migrations` folder
-- [ ] Screenshot showing migration ran successfully
+- [x] `Product.php` Model file in `app/Models` folder
+- [x] Migration file in `database/migrations` folder
+- [x] Screenshot showing migration ran successfully
 
 ## Part C: Controller & Routes (25 marks)
 
