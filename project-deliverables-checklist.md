@@ -4,17 +4,17 @@
 Refer to: [Assignment: Backend Development with Laravel](assignment-instruction/Backend%20Development%20with%20Laravel%20Assignment.pdf)
 
 ## 📅 Timeline
-Start: 17-12-2025
+Start: 17-12-2025\
 Deadline: 21-12-2025, 11:59 PM
 
 ## Part A: Project Setup (25 marks)
 
 - [ ] Create a system that can manage product inventory, with backend API that allow:
-    - [ ] View all products
-    - [ ] View a single product
-    - [ ] Create a new product
-    - [ ] Update an existing product
-    - [ ] Delete a product
+    - [x] View all products
+    - [x] View a single product
+    - [x] Create a new product
+    - [x] Update an existing product
+    - [x] Delete a product
 
 - [x] Screenshot of .env database configurations
 - [x] Screenshot of successful `php artisan migrate` output
@@ -36,46 +36,46 @@ Deadline: 21-12-2025, 11:59 PM
 
 ## Part C: Controller & Routes (25 marks)
 
-- [ ] Create a `ProductController.php` with these endpoints:
-    - [ ] `GET` method, `api/products` endpoint, `index` action that list all products
-    - [ ] `GET` method, `api/products/{id}` endpoint, `show` action that show a single product
-    - [ ] `POST` method, `api/products` endpoint, `store` action that create a new product
-    - [ ] `PUT` method, `api/products/{id}` endpoint, `update` action that update an existing product
-    - [ ] `DELETE` method, `api/products/{id}` endpoint, `destroy` action that delete a product
+- [x] Create a `ProductController.php` with these endpoints:
+    - [x] `GET` method, `api/products` endpoint, `index` action that list all products
+    - [x] `GET` method, `api/products/{id}` endpoint, `show` action that show a single product
+    - [x] `POST` method, `api/products` endpoint, `store` action that create a new product
+    - [x] `PUT` method, `api/products/{id}` endpoint, `update` action that update an existing product
+    - [x] `DELETE` method, `api/products/{id}` endpoint, `destroy` action that delete a product
 
-- [ ] Requirements:
-    - [ ] All responses return JSON format
-    - [ ] Use correct HTTP status codes
-        - [ ] `200` for success
-        - [ ] `201` for created
-        - [ ] `404` for not found
-        - [ ] `422` for validation errors
-        - [ ] `500` for server error
-    - [ ] Validate input for `store` and `update` actions
-    - [ ] Handle missing products with `404` response
+- [x] Requirements:
+    - [x] All responses return JSON format
+    - [x] Use correct HTTP status codes
+        - [x] `200` for success
+        - [x] `201` for created
+        - [x] `404` for not found
+        - [x] `422` for validation errors
+        - [x] `500` for server error
+    - [x] Validate input for `store` and `update` actions
+    - [x] Handle missing products with `404` response
 
-- [ ] `app/Http/Controllers/ProductController.php`
-- [ ] `routes/api.php`
+- [x] `app/Http/Controllers/ProductController.php`
+- [x] `routes/api.php`
 
 ## Part D: API Testing with Bruno API Client (25 marks)
 
-- [ ] Test all endpoints using Bruno and provide clear screenshots showing request and response of the following:
-    1. [ ] `GET` method, `api/products` endpoint - displays empty product lists (before creating any)
-    2. [ ] `POST` method, `api/products` endpoint - creates a new product (showing `201` status code)
-    3. [ ] `GET` method, `api/products` endpoint - displays product lists (after creating)
-    4. [ ] `GET` method, `api/products/{id}` endpoint - displays a single product
-    5. [ ] `PUT` method, `api/products/{id}` endpoint - updates an existing product
-    6. [ ] `DELETE` method, `api/products/{id}` endpoint - deletes a product
+- [x] Test all endpoints using Bruno and provide clear screenshots showing request and response of the following:
+    1. [x] `GET` method, `api/products` endpoint - displays empty product lists (before creating any)
+    2. [x] `POST` method, `api/products` endpoint - creates a new product (showing `201` status code)
+    3. [x] `GET` method, `api/products` endpoint - displays product lists (after creating)
+    4. [x] `GET` method, `api/products/{id}` endpoint - displays a single product
+    5. [x] `PUT` method, `api/products/{id}` endpoint - updates an existing product
+    6. [x] `DELETE` method, `api/products/{id}` endpoint - deletes a product
     
 ## Submission Checklist
 
 Before submitting, ensure:
--  [ ] Code pushed to GitHub
--  [ ] README.md with setup instructions
--  [ ] `.env.example` file included
--  [ ] Migrations ran without errors
--  [ ] All 5 endpoints worked
--  [ ] All screenshots provided in `/screenshots` folder
+-  [x] Code pushed to GitHub
+-  [x] README.md with setup instructions
+-  [x] `.env.example` file included
+-  [x] Migrations ran without errors
+-  [x] All 5 endpoints worked
+-  [x] All screenshots provided in `/screenshots` folder
 
 ## Submission Format
 
