@@ -81,5 +81,5 @@ Before submitting, ensure:
 
 1. [ ] GitHub repo created, repo is set to public
 2. [ ] Pushed all code to GitHub
-3. [ ] Add screenshot to `/screenshots` folder
+3. [x] Add screenshot to `/screenshots` folder
 4. [ ] Submitted the repository to [Sir Uzzair](mailto:uzzair@invokeisdata.com)
