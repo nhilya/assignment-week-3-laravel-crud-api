@@ -1,5 +1,3 @@
-# npm test
-
 #!/bin/sh
 ###############################################################################
 # Husky Pre-commit Hook
@@ -41,7 +39,7 @@ cleanup() {
 }
 trap cleanup EXIT INT TERM
 
-git diff --cached --name-only --diff-filter=ACMR | grep "\.php$" > "$STAGED_FILES_TEMP"
+git diff --cached --name-only --diff-filter=ACMR | grep "\.php$" > "$STAGED_FILES_TEMP" || true
 
 if [ ! -s "$STAGED_FILES_TEMP" ]; then
   echo "ℹ No staged PHP files. Skipping Pint & PHPStan."
