@@ -47,7 +47,7 @@ Edit `.env` and set your database credentials:
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=sme_pos
+DB_DATABASE=assignment-week-3-laravel-crud-api
 DB_USERNAME=root
 DB_PASSWORD=your_password
 ```
@@ -58,13 +58,19 @@ Then run:
 php artisan migrate
 ```
 
-### ✅ 6. Run Vite in development
+### ✅ 6. Seed the database
+
+```bash
+php artisan db:seed
+```
+
+### ✅ 7. Run Vite in development
 
 ```bash
 npm run dev
 ```
 
-### ✅ 7. Serve the app with Laravel Valet or PHP's built-in server
+### ✅ 8. Serve the app with Laravel Valet or PHP's built-in server
 
 **If using Valet:**
 
@@ -90,7 +96,7 @@ Visit: [http://localhost:8000](http://localhost:8000)
 
 ### ✅ Notes
 
--   Session driver: `database` (run `php artisan session:table && php artisan migrate` if needed)
+-   Session driver: `database` (Configured in `.env` and migrations)
 -   Logging: daily logs in `storage/logs`
 
 ### ✅ Troubleshooting
