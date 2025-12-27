@@ -106,10 +106,10 @@ Refer to: [Assignment Continuation: Part E — Authentication & Authorization (L
 
 - [ ] Implement token-based authentication for API users.
     - [ ] Add API endpoints:
-        - [ ] `POST /api/auth/register`
-        - [ ] `POST /api/auth/login`
-        - [ ] `POST /api/auth/logout` (requires authentication)
-        - [ ] `GET /api/auth/me` (requires authentication)
+        - [ ] `POST` `/api/auth/register`
+        - [ ] `POST` `/api/auth/login`
+        - [ ] `POST` `/api/auth/logout` (requires authentication)
+        - [ ] `GET` `/api/auth/me` (requires authentication)
 
     - [ ] All responses must be JSON with correct HTTP status codes:
         - [ ] `200` for successful registration
