@@ -9,7 +9,7 @@ Deadline: 21-12-2025, 11:59 PM
 
 ## Part A: Project Setup (25 marks)
 
-- [ ] Create a system that can manage product inventory, with backend API that allow:
+- [x] Create a system that can manage product inventory, with backend API that allow:
     - [x] View all products
     - [x] View a single product
     - [x] Create a new product
@@ -79,7 +79,7 @@ Before submitting, ensure:
 
 ## Submission Format
 
-1. [ ] GitHub repo created, repo is set to public
-2. [ ] Pushed all code to GitHub
+1. [x] GitHub repo created, repo is set to public
+2. [x] Pushed all code to GitHub
 3. [x] Add screenshot to `/screenshots` folder
-4. [ ] Submitted the repository to [Sir Uzzair](mailto:uzzair@invokeisdata.com)
+4. [x] Submitted the repository to [Sir Uzzair](mailto:uzzair@invokeisdata.com)
