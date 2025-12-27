@@ -89,6 +89,9 @@ Before submitting, ensure:
 
 # Assignment Continuation: Part E — Authentication & Authorization (Laravel + Spatie Permissions)
 
+## Project Goal
+Refer to: [Assignment Continuation: Part E — Authentication & Authorization (Laravel + Spatie Permissions)](<../assignment-instruction/Assignment%20Continuation_%20Part%20E%20—%20Authentication%20%26%20Authorization%20(Laravel%20%2B%20Spatie%20Permissions).pdf>)
+
 ## Part E (30 marks)
 
 ### E1: Git workflow (5 marks)
@@ -96,8 +99,8 @@ Before submitting, ensure:
 - [x] Create a new branch named `authz-spatie`
 - [x] Push the branch to GitHub
 - [x] Make sure the main branch is up to date, clean and pushed to GitHub
-- [x] All work for the [Assignment E - Authentication & Authorization (Laravel + Spatie Permissions)](<../assignment-instruction/Assignment%20Continuation_%20Part%20E%20—%20Authentication%20%26%20Authorization%20(Laravel%20%2B%20Spatie%20Permissions).pdf>) is done in the `authz-spatie` branch
-- [ ] Screenshot of git branch showing the new branch name + latest commit
+- [x] All work for the [Assignment Continuation: Part E — Authentication & Authorization (Laravel + Spatie Permissions)](<../assignment-instruction/Assignment%20Continuation_%20Part%20E%20—%20Authentication%20%26%20Authorization%20(Laravel%20%2B%20Spatie%20Permissions).pdf>) is done in the `authz-spatie` branch
+- [x] Screenshot of git branch showing the new branch name + latest commit
 
 ### E2: Authentication (10 marks)
 
@@ -168,7 +171,7 @@ Before submitting, ensure:
 
 ### E4: API Testing with Bruno (required for Part E)
 
--   [ ] Provide screenshots (request + response) for these:
+- [ ] Provide screenshots (request + response) for these:
     - [ ] Register a user → `201`
     - [ ] Login and obtain token → `200`
     - [ ] Access `GET` `/api/auth/me` without token → `401`
@@ -185,4 +188,4 @@ Before submitting, ensure:
         - [ ] Code is pushed (including the new branch)
         - [ ] `README` includes how to run migrations + seed roles/permissions
         - [ ] Auth + permission enforcement works as specified
-        - [ ] Bruno screenshots for [Part E](<../assignment-instructionAssignment%20Continuation_%20Part%20E%20—%20Authentication%20%26%20Authorization%20(Laravel%20%2B%20Spatie%20Permissions).pdf>) are complete
+        - [ ] Bruno screenshots for [Part E](<../assignment-instruction/Assignment%20Continuation_%20Part%20E%20—%20Authentication%20%26%20Authorization%20(Laravel%20%2B%20Spatie%20Permissions).pdf>) are complete
