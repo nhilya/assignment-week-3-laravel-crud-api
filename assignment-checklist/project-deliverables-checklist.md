@@ -120,7 +120,7 @@ Refer to: [Assignment Continuation: Part E — Authentication & Authorization (L
     - [ ] Using the suggested approach: Laravel Sanctum for token auth (personal access tokens).
     - [ ] Auth controller(s) (e.g. `app/Http/Controllers/Auth/*`)
     - [ ] Updated routes (e.g. `routes/api.php`)
-    - [ ] Screenshot of successful auth flow tests in Bruno (see E4)
+    - [ ] Screenshot of successful auth flow tests in Bruno (see [E4](#e4-api-testing-with-bruno-required-for-part-e))
 
 ### E3: Authorization with Spatie Permissions (15 marks)
 
