@@ -1,8 +1,18 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
+/**
+ * Routes for Login and Logout
+ */
+Route::post('login', [AuthController::class, 'login']);
+
+/**
+ * Protected routes
+ */
+Route::get('/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
 /**
  * API Routes to ProductController
  */
