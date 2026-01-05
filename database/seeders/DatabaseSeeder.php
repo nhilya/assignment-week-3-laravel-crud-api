@@ -2,11 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Product;
-use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -24,12 +21,15 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        Product::factory(10)->create();
+        // Reset cached roles and permissions (using this method as I wanna just run migrate:fresh --seed command without running cache:clear command)
+        // app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
 
-        User::factory()->create([
-            'name' => 'Nuha Ilya',
-            'email' => 'nuhailya@gmail.com',
-            'password' => Hash::make('password@123'),
+        /**
+         * Move RolePermissionSeeder to a new dedicated seeder files for granular control, readability, and maintainability
+         */
+        $this->call([
+            ProductSeeder::class,
+            RolePermissionSeeder::class,
         ]);
     }
 }
