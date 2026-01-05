@@ -104,88 +104,88 @@ Refer to: [Assignment Continuation: Part E — Authentication & Authorization (L
 
 ### E2: Authentication (10 marks)
 
-- [ ] Implement token-based authentication for API users.
-    - [ ] Add API endpoints:
-        - [ ] `POST` `/api/auth/register`
-        - [ ] `POST` `/api/auth/login`
-        - [ ] `POST` `/api/auth/logout` (requires authentication)
-        - [ ] `GET` `/api/auth/me` (requires authentication)
+- [x] Implement token-based authentication for API users.
+    - [x] Add API endpoints:
+        - [x] `POST` `/api/auth/register`
+        - [x] `POST` `/api/auth/login`
+        - [x] `POST` `/api/auth/logout` (requires authentication)
+        - [x] `GET` `/api/auth/me` (requires authentication)
 
-    - [ ] All responses must be JSON with correct HTTP status codes:
-        - [ ] `200` for successful registration
-        - [ ] `201` for success
-        - [ ] `401` for unauthenticated requests
-        - [ ] `422` for validation errors
+    - [x] All responses must be JSON with correct HTTP status codes:
+        - [x] `200` for successful registration
+        - [x] `201` for success
+        - [x] `401` for unauthenticated requests
+        - [x] `422` for validation errors
 
-    - [ ] Using the suggested approach: Laravel Sanctum for token auth (personal access tokens).
-    - [ ] Auth controller(s) (e.g. `app/Http/Controllers/Auth/*`)
-    - [ ] Updated routes (e.g. `routes/api.php`)
-    - [ ] Screenshot of successful auth flow tests in Bruno (see [E4](#e4-api-testing-with-bruno-required-for-part-e))
+    - [x] Using the suggested approach: Laravel Sanctum for token auth (personal access tokens).
+    - [x] Auth controller(s) (e.g. `app/Http/Controllers/Auth/*`)
+    - [x] Updated routes (e.g. `routes/api.php`)
+    - [x] Screenshot of successful auth flow tests in Bruno (see [E4](#e4-api-testing-with-bruno-required-for-part-e))
 
 ### E3: Authorization with Spatie Permissions (15 marks)
 
 1. Install & setup
 
-    - [ ] Use `spatie/laravel-permission` to enforce permissions on product endpoints.
-        - [ ] Install spatie/laravel-permission
-        - [ ] Publish config/migrations
-        - [ ] Run migrations
-        - [ ] Ensure User model uses `HasRoles` trait
+    - [x] Use `spatie/laravel-permission` to enforce permissions on product endpoints.
+        - [x] Install spatie/laravel-permission
+        - [x] Publish config/migrations
+        - [x] Run migrations
+        - [x] Ensure User model uses `HasRoles` trait
 
 2. Define roles & permissions
 
-    - [ ] Create at least these permissions:
-        - [ ] `products-view`
-        - [ ] `products-create`
-        - [ ] `products-update`
-        - [ ] `products-delete`
+    - [x] Create at least these permissions:
+        - [x] `products-view`
+        - [x] `products-create`
+        - [x] `products-update`
+        - [x] `products-delete`
 
-    - [ ] Create at least these roles (you may add more):
-        - [ ] admin: all product permissions
-        - [ ] staff: view, create, update
-        - [ ] viewer: view only
+    - [x] Create at least these roles (you may add more):
+        - [x] admin: all product permissions
+        - [x] staff: view, create, update
+        - [x] viewer: view only
 
 3. Seed roles & permissions
 
-    - [ ] Create a seeder (recommended) to generate roles & permissions.
-    - [ ] Assign a role to a user (either via seeder, tinker, or a protected admin route).
+    - [x] Create a seeder (recommended) to generate roles & permissions.
+    - [x] Assign a role to a user (either via seeder, tinker, or a protected admin route).
 
 4. Protect Product routes
 
-    - [ ] Update /api/products routes so that:
-        - [ ] All product endpoints require authentication.
-        - [ ] Permissions are enforced:
-            - [ ] `GET` `/api/products` and `GET` `/api/products/{id}` → `products-view`
-            - [ ] `POST` `/api/products` → `products-create`
-            - [ ] `PUT` `/api/products/{id}` → `products-update`
-            - [ ] `DELETE` `/api/products/{id}` → `products-delete`
+    - [x] Update /api/products routes so that:
+        - [x] All product endpoints require authentication.
+        - [x] Permissions are enforced:
+            - [x] `GET` `/api/products` and `GET` `/api/products/{id}` → `products-view`
+            - [x] `POST` `/api/products` → `products-create`
+            - [x] `PUT` `/api/products/{id}` → `products-update`
+            - [x] `DELETE` `/api/products/{id}` → `products-delete`
 
-    - [ ] Expected behavior
-        - [ ] Unauthenticated request → `401 Unauthorized`
-        - [ ] Authenticated but missing permission → `403 Forbidden`
-        - [ ] Authorized → normal success status codes (`200`/`201` etc)
+    - [x] Expected behavior
+        - [x] Unauthenticated request → `401 Unauthorized`
+        - [x] Authenticated but missing permission → `403 Forbidden`
+        - [x] Authorized → normal success status codes (`200`/`201` etc)
 
-    - [ ] Seeder file(s) (`roles/permissions`)
-    - [ ] Proof in code: `middleware/policies/gates` (your choice), but must use Spatie permissions.
-    - [ ] Screenshot of successful `php artisan migrate` and `php artisan db:seed` output.
+    - [x] Seeder file(s) (`roles/permissions`)
+    - [x] Proof in code: `middleware/policies/gates` (your choice), but must use Spatie permissions.
+    - [x] Screenshot of successful `php artisan migrate` and `php artisan db:seed` output.
 
 ### E4: API Testing with Bruno (required for Part E)
 
-- [ ] Provide screenshots (request + response) for these:
-    - [ ] Register a user → `201`
-    - [ ] Login and obtain token → `200`
-    - [ ] Access `GET` `/api/auth/me` without token → `401`
-    - [ ] Access `GET` `/api/auth/me` with token → `200`
-    - [ ] Access `POST` `/api/products` as viewer → `403`
-    - [ ] Access `GET` `/api/products` as viewer → `200`
-    - [ ] Access `POST` `/api/products` as admin (or staff) → `201`
-    - [ ] Logout → `200`
+- [x] Provide screenshots (request + response) for these:
+    - [x] Register a user → `201`
+    - [x] Login and obtain token → `200`
+    - [x] Access `GET` `/api/auth/me` without token → `401`
+    - [x] Access `GET` `/api/auth/me` with token → `200`
+    - [x] Access `POST` `/api/products` as viewer → `403`
+    - [x] Access `GET` `/api/products` as viewer → `200`
+    - [x] Access `POST` `/api/products` as admin (or staff) → `201`
+    - [x] Logout → `200`
 
-- [ ] Put all screenshots in `screenshots/` folder (continue the same style from Part D).
+- [x] Put all screenshots in `screenshots/` folder (continue the same style from Part D).
 
-- [ ] Continue using the same repo rules (public GitHub repo, `README`, `.env.example`, screenshots folder).
-    - [ ] Make sure:
-        - [ ] Code is pushed (including the new branch)
-        - [ ] `README` includes how to run migrations + seed roles/permissions
-        - [ ] Auth + permission enforcement works as specified
-        - [ ] Bruno screenshots for [Part E](<../assignment-instruction/Assignment%20Continuation_%20Part%20E%20—%20Authentication%20%26%20Authorization%20(Laravel%20%2B%20Spatie%20Permissions).pdf>) are complete
+- [x] Continue using the same repo rules (public GitHub repo, `README`, `.env.example`, screenshots folder).
+    - [x] Make sure:
+        - [x] Code is pushed (including the new branch)
+        - [x] `README` includes how to run migrations + seed roles/permissions
+        - [x] Auth + permission enforcement works as specified
+        - [x] Bruno screenshots for [Part E](<../assignment-instruction/Assignment%20Continuation_%20Part%20E%20—%20Authentication%20%26%20Authorization%20(Laravel%20%2B%20Spatie%20Permissions).pdf>) are complete
