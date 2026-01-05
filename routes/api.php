@@ -5,14 +5,13 @@ use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /**
- * Routes for Login and Logout
+ * API Routes for Register, Login, Logout, and Me
  */
+Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
+Route::post('logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
+Route::get('me', [AuthController::class, 'me'])->middleware('auth:sanctum');
 
-/**
- * Protected routes
- */
-Route::get('/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
 /**
  * API Routes to ProductController
  */
