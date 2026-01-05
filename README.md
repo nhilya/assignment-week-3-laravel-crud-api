@@ -15,6 +15,11 @@ cd assignment-week-3-laravel-crud-api
 
 Ensure you have PHP (8.1 or newer) and Composer installed.
 
+This project uses:
+
+-   **Laravel Sanctum** for API authentication.
+-   **Spatie Laravel Permission** for role-based access control.
+
 ```bash
 composer install
 ```
@@ -52,13 +57,15 @@ DB_USERNAME=root
 DB_PASSWORD=your_password
 ```
 
-Then run:
+Then run the migrations. This will create all necessary tables including those for **Sanctum** (personal_access_tokens) and **Spatie Permissions** (roles, permissions, model_has_roles, etc.).
 
 ```bash
 php artisan migrate
 ```
 
 ### ✅ 6. Seed the database
+
+Run the seeders to populate the database with default roles (`admin`, `user`) and permissions.
 
 ```bash
 php artisan db:seed
