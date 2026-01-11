@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Services\NoService;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
@@ -142,15 +143,18 @@ class ProductController extends Controller
      * Delete a specific product.
      * Include logic for authorization using abort_if() method to ensure user has permission to access this method
      *
-     * @param  int  $id
      * @return \Illuminate\Http\JsonResponse
      */
-    public function destroy($id)
+    public function destroy(int $id, NoService $noService)
     {
         if (! Auth::user()->can('product-delete')) {
+            // 2. Get the sassy rejection reason
+            $reason = $noService->getRejectionReason();
+
             return response()->json([
                 'success' => false,
                 'message' => 'You do not have permission to delete this product. Please contact your administrator.',
+                'system_message' => "Message from admin: {$reason}",
                 'user' => Auth::user()->name,
                 'role' => Auth::user()->getRoleNames(),
             ], Response::HTTP_FORBIDDEN);
