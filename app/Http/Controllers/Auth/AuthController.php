@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\AuthRequest;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,13 +18,9 @@ class AuthController extends Controller
      * - generating token if success
      * - returning the response
      */
-    public function register(Request $request): JsonResponse
+    public function register(AuthRequest $request): JsonResponse
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'password' => 'required',
-        ]);
+        $request->validated();
 
         $user = User::create([
             'name' => $request->name,
@@ -46,13 +42,10 @@ class AuthController extends Controller
      * - generating token if success
      * - returning the response
      */
-    public function login(Request $request): JsonResponse
+    public function login(AuthRequest $request): JsonResponse
     {
         // validation logic
-        $request->validate([
-            'email' => 'required|email',
-            'password' => 'required',
-        ]);
+        $request->validated();
 
         // check if the user is exists in db
         $user = User::where('email', $request->email)->first();
