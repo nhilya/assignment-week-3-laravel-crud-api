@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ProductRequest;
 use App\Models\Product;
 use App\Services\NoService;
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 
@@ -77,16 +77,11 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
         abort_if(! Auth::user()->can('product-create'), Response::HTTP_FORBIDDEN, "You do not have permission to create this product. If there's any issue, please contact your administrator.");
 
-        $validated_product = $request->validate([
-            'name' => 'required',
-            'description' => 'required',
-            'price' => 'required',
-            'stock' => 'required',
-        ]);
+        $validated_product = $request->validated();
 
         $product = Product::create($validated_product);
 
@@ -106,7 +101,7 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function update(Request $request, int $id)
+    public function update(ProductRequest $request, int $id)
     {
         abort_if(! Auth::user()->can('product-update'), Response::HTTP_FORBIDDEN, "You do not have permission to update this product. If there's any issue, please contact your administrator.");
 
@@ -121,12 +116,7 @@ class ProductController extends Controller
             ], Response::HTTP_NOT_FOUND);
         }
 
-        $validated_product = $request->validate([
-            'name' => 'required',
-            'description' => 'required',
-            'price' => 'required|numeric',
-            'stock' => 'required|numeric',
-        ]);
+        $validated_product = $request->validated();
 
         $product->update($validated_product);
 
