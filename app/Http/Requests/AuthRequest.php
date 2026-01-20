@@ -21,7 +21,11 @@ class AuthRequest extends FormRequest
      */
     public function rules(): array
     {
-        if ($this->routeIs('login')) {
+        /**
+         * Specific validation for login requests.
+         * uses is('{*}/login') method (the wildcard * search) to match any route ending in /login, removing the dependency on named routes in api.php.
+         */
+        if ($this->is('*/login')) {
             return [
                 'email' => 'required|email',
                 'password' => 'required',
